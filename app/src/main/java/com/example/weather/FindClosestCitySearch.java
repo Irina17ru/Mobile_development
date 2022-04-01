@@ -25,7 +25,7 @@ import java.util.Scanner;
 public class FindClosestCitySearch extends AppCompatActivity {
     int cityCurrentPosition;
     int counter = 30;
-
+    int start = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +36,11 @@ public class FindClosestCitySearch extends AppCompatActivity {
         String jsonString = new Scanner(inputStream).useDelimiter("\\A").next();
         try {
             JSONArray jsonCity = new JSONArray(jsonString);
-            for(int i = 0; i < counter; i++){
+            for(int i = start; i < counter + start; i++){
                 String jsonTemp = jsonCity.getJSONObject(i).getString("name");
                 citySpinnerList.add(jsonTemp);
                 }
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.spinner_simple, citySpinnerList);
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_simple, citySpinnerList);
             citySpinner.setAdapter(adapter);
             citySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
@@ -68,7 +68,7 @@ public class FindClosestCitySearch extends AppCompatActivity {
         double cityLatitude = jsonCity.getJSONObject(cityCurrentPosition).getJSONObject("coord").getDouble("lat");
         int cmp = Integer.parseInt(inputDistance.getText().toString().replaceAll("[\\D]", ""));
 
-        for (int i = 0; i < counter; i++) {
+        for (int i = start; i < counter + start; i++) {
             if (i != cityCurrentPosition) {
                 String tempCityName = jsonCity.getJSONObject(i).getString("name");
                 double tempLongitude = jsonCity.getJSONObject(i).getJSONObject("coord").getDouble("lon");
@@ -76,7 +76,6 @@ public class FindClosestCitySearch extends AppCompatActivity {
                 Location.distanceBetween(cityLatitude, cityLongitude, tempLatitude, tempLongitude, tempDistance);
                 int distance = Math.round(tempDistance[0] / 1000);
                 if (cmp > distance) {
-                    Log.d("CMP", String.valueOf(cmp) + " " + distance);
                     closestCity.add(new ClosestCity(tempCityName, String.valueOf(distance)));
                 }
             }

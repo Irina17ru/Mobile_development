@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">weather</string>
+    <string name="forecast">Прогноз погоды</string>
+    <string name="forecast_get">Получить прогноз</string>
+    <string name="warm_city">Теплый город</string>
+    <string name="closest_city">Соседние города</string>
+    <string name="neighbour_city">Введите расстояние</string>
+</resources>

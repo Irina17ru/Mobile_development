@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/ccname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Иркутск"
+            android:layout_weight="1">
+        </TextView>
+        <TextView
+            android:id="@+id/ccdist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 км"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:textAlignment="textEnd"
+            android:layout_weight="1"
+            tools:ignore="RtlCompat"></TextView>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_height="2dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/line">
+    </ImageView>
+</LinearLayout>

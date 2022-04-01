@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText"
+    android:id="@+id/simple_spinner_name"
+    android:text="Иркутск"
+    android:gravity="left"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="20dp"
+    android:padding = "20dp">
+    </TextView>
+

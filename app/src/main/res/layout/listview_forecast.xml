@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/lvdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="27 august"
+        android:layout_weight="1">
+    </TextView>
+    <TextView
+        android:id="@+id/lvtempnight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+7"
+        android:gravity="right"
+        android:layout_weight="1"></TextView>
+    <ProgressBar
+        android:id="@+id/lvprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"></ProgressBar>
+    <TextView
+        android:id="@+id/lvtempday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+9"
+        android:layout_weight="1"></TextView>
+
+</LinearLayout>
+<ImageView
+    android:layout_height="2dp"
+    android:layout_width="match_parent"
+    android:src="@drawable/line">
+</ImageView>
+</LinearLayout>
